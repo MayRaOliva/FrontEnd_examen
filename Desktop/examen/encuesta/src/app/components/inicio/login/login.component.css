@@ -1,0 +1,21 @@
+.container {
+    display:flex;
+    justify-content:center ;
+    align-items: center;
+    min-height: 110vh;
+    
+}
+
+h3{
+    font-family: 'Bebas Neue', cursive;
+    font-size: xx-large;
+    color: rgb(34, 33, 33);
+}
+
+.btn-login {
+    background-color:  rgb(18, 113, 238);
+    border:  rgb(18, 113, 238);
+    margin: 5px;
+    
+}
+

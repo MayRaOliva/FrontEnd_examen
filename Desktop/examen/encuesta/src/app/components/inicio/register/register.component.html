@@ -1,0 +1,43 @@
+
+
+<div class="container">
+    <div class ="row" style="width:40%;">
+        <div class="col-lg-6-offset-lg-3" >
+            <div class="card text-center" style="padding:50px ;">
+                <h3>REGISTRARSE</h3>
+                <br>
+                <form [formGroup="register"] (ngSubmit)="registrarUsuario()">
+                    <div class="form-group" style="text-align: center ;">
+                        <input type="text" class="form-group" placeholder="Usuario" formControlName="usuario">
+                        <span class="text-danger ml-2"
+                            *ngIf="register.get('usuario')?.hasError('required') && register.get('usuario')?.touched">
+                            El usuario es requerido 
+                        </span>
+                    </div>
+                   
+                    <div class="form-group"  style="text-align: center;">
+                        <input type="password" class="form-group" placeholder="Contraseña" formControlName="password">
+                        <span class="text-danger"
+                        *ngIf="register.get('password')?.hasError('required') && register.get('password')?.touched">
+                            La contraseña es requerida
+                        </span>
+                        <span class="text-danger"
+                        *ngIf="register.get('password')?.hasError('minLength') && register.get('password')?.touched">
+                            La contraseña debe contener como minimo 4 caracteres
+                        </span>
+                    </div>
+
+                    <div class="form-group">
+                        <button class="btn btn-primary ml-2 btn-reg" type="submit" >Aceptar</button>
+                        <button class="btn btn-secondary" routerLink="/inicio/login"> Volver</button>
+                    </div>
+
+                    
+                </form>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>

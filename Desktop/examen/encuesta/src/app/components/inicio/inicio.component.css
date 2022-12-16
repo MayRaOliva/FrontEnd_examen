@@ -1,0 +1,6 @@
+.layout{
+    background:linear-gradient(rgba(0, 0, 0, 0.116),rgba(0, 0, 0, 0.116)), url(../../../assets/img/coding.jpg);
+   
+    background-size: cover;
+    background-position: center;
+}
